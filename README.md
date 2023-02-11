@@ -12,3 +12,5 @@ My versions at the time of writing this app.
 - Go (1.13.6)
 - Docker
 - Heroku account
+
+part 2: https://dean-baker.medium.com/deploying-go-react-to-heroku-using-docker-part-2-the-database-afaaaae66f81

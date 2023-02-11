@@ -1,0 +1,25 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:13.4
+    volumes:
+      - data:/var/lib/postgresql/data
+    container_name: go-postgres
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    env_file: "./docker/dev.env"
+    ports:
+      - "5432:5432"
+    # more connections (for concurrent tests)
+    # command: -N 500
+    # Switch "command" to the following line if you want to debug the actual
+    # queries that are being run in postgres.
+    #
+    command: -c log_statement='all'
+
+ 
+
+volumes:
+  data:

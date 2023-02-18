@@ -5,62 +5,35 @@ import "./App.css";
 import PingComponent from "./PingComponent";
 import LazyLoad from "react-lazyload";
 import { Button } from "./components/Button";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { Intro } from "./Intro";
+import { Talks } from "./Talks";
 
 function App() {
-  const [imgSrc, setSrc] = useState(compressedMe);
-
-  const onLoad = useCallback(() => {
-    setSrc(me3);
-  }, []);
-
-  useEffect(() => {
-    const img = new Image();
-    img.src = me3 as string;
-    img.addEventListener("load", onLoad);
-
-    return () => {
-      img.removeEventListener("load", onLoad);
-    };
-  }, [onLoad]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Welcome! I'm Lydia.</h1>
-        <LazyLoad height={200}>
-          <img
-            style={{
-              borderRadius: "50%",
-              objectFit: "cover",
-              width: 300,
-              height: 300,
-            }}
-            src={imgSrc}
-            alt="Lydia"
-            loading="eager"
-          />
-        </LazyLoad>
-        <p style={{ width: "50%", textAlign: "left" }}>
-          After taking a computer science class on a whim, I got hooked on
-          building systems from scratch and breaking down a problem to its
-          component parts.
-        </p>
-        <p style={{ width: "50%", textAlign: "left" }}>
-          I started working at Atomic, a consultancy in Grand Rapids, right
-          after graduation. At Atomic, I combine my interest in building
-          full-stack systems with the more business-focused side building a
-          product that makes sense for the problem.
-        </p>
-        <p style={{ width: "50%", textAlign: "left" }}>
-          I enjoy understanding how all parts of a system fit together - from
-          database constraints to frontend animations.
-        </p>
-        <div style={{ display: "flex" }}>
-          <Button label="Talks" />
-          <Button label="Posts" />
-          <Button label="Resume" />
-        </div>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <header className="App-header">
+          <div
+            style={{ display: "flex", width: "100%", justifyContent: "end" }}
+          >
+            <Link to="/">
+              <Button label="Intro" />
+            </Link>
+            <Link to="/talks">
+              <Button label="Talks" />
+            </Link>
+            <Button label="Posts" />
+            <Button label="Resume" />
+          </div>
+          {/* todo: move this */}
+          <Routes>
+            <Route path="/" element={<Intro />} />
+            <Route path="/talks" element={<Talks />} />
+          </Routes>
+        </header>
+      </div>
+    </BrowserRouter>
   );
 }
 

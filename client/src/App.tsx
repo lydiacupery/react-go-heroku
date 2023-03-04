@@ -13,25 +13,30 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <header className="App-header">
-          <div
-            style={{ display: "flex", width: "100%", justifyContent: "end" }}
-          >
-            <Link to="/">
-              <Button label="Intro" />
-            </Link>
-            <Link to="/talks">
-              <Button label="Talks" />
-            </Link>
-            <Button label="Posts" />
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "center",
+            backgroundColor: "#446eac59",
+            marginTop: "20px",
+          }}
+        >
+          <Link to="/">
+            <Button label="Intro" />
+          </Link>
+          <Link to="/talks">
+            <Button label="Talks" />
+          </Link>
+          <Link to="/resume">
             <Button label="Resume" />
-          </div>
-          {/* todo: move this */}
-          <Routes>
-            <Route path="/" element={<Intro />} />
-            <Route path="/talks" element={<Talks />} />
-          </Routes>
-        </header>
+          </Link>
+        </div>
+        <Routes>
+          <Route path="/" element={<Intro />} />
+          <Route path="/talks" element={<Talks />} />
+          <Route path="/resume" element={<></>} />
+        </Routes>
       </div>
     </BrowserRouter>
   );

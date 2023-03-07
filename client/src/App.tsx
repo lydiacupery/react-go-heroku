@@ -8,6 +8,7 @@ import { Button } from "./components/Button";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import { Intro } from "./Intro";
 import { Talks } from "./Talks";
+import { Resume } from "./Resume";
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Intro />} />
           <Route path="/talks" element={<Talks />} />
-          <Route path="/resume" element={<></>} />
+          <Route path="/resume" element={<Resume />} />
         </Routes>
       </div>
     </BrowserRouter>

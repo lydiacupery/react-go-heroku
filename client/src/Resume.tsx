@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import LazyLoad from "react-lazyload";
 import resume from "./assets/resume.png";
-import resumePdf from "./assets/resume.pdf";
+// import resumePdf from "./assets/resume.pdf";
 
 export const Resume: React.FC<{}> = () => {
   const [imgSrc, setSrc] = useState(undefined);
@@ -27,7 +27,7 @@ export const Resume: React.FC<{}> = () => {
         loading="eager"
         style={{ height: "100%" }}
       /> */}
-      <iframe
+      {/* <iframe
         id="resume"
         src={resumePdf}
         allowFullScreen
@@ -36,7 +36,7 @@ export const Resume: React.FC<{}> = () => {
         height="1100"
         width="1100"
         title="Resume"
-      />
+      /> */}
     </div>
   );
 };

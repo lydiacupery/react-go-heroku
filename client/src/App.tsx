@@ -5,14 +5,20 @@ import "./App.css";
 import PingComponent from "./PingComponent";
 import LazyLoad from "react-lazyload";
 import { Button } from "./components/Button";
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  Link,
+  HashRouter,
+} from "react-router-dom";
 import { Intro } from "./Intro";
 import { Talks } from "./Talks";
 import { Resume } from "./Resume";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <div
           style={{
@@ -39,7 +45,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

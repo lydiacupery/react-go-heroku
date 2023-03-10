@@ -1,24 +1,24 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import LazyLoad from "react-lazyload";
-import resume from "./assets/resume.png";
-// import resumePdf from "./assets/resume.pdf";
+import { Document, Page } from "react-pdf/dist/esm/entry.webpack5";
+import "react-pdf/dist/esm/Page/TextLayer.css";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
 export const Resume: React.FC<{}> = () => {
-  const [imgSrc, setSrc] = useState(undefined);
+  // const [imgSrc, setSrc] = useState(undefined);
 
-  const onLoad = useCallback(() => {
-    setSrc(resume);
-  }, []);
+  // const onLoad = useCallback(() => {
+  //   setSrc(resume);
+  // }, []);
 
-  useEffect(() => {
-    const img = new Image();
-    img.src = resume as string;
-    img.addEventListener("load", onLoad);
+  // useEffect(() => {
+  //   const img = new Image();
+  //   img.src = resume as string;
+  //   img.addEventListener("load", onLoad);
 
-    return () => {
-      img.removeEventListener("load", onLoad);
-    };
-  }, [onLoad]);
+  //   return () => {
+  //     img.removeEventListener("load", onLoad);
+  //   };
+  // }, [onLoad]);
   return (
     <div style={{ marginTop: "20px", height: "100%" }}>
       {/* <img
@@ -29,7 +29,8 @@ export const Resume: React.FC<{}> = () => {
       /> */}
       {/* <iframe
         id="resume"
-        src={resumePdf}
+        // src={resumePdf}
+        src={"./assets/resume.pdf"} 
         allowFullScreen
         frameBorder="1"
         scrolling="auto"
@@ -37,6 +38,18 @@ export const Resume: React.FC<{}> = () => {
         width="1100"
         title="Resume"
       /> */}
+      <Document
+        // file={
+        //   "https://drive.google.com/file/d/1oCFPb6SYnweyNR9lk2QcewJvRs9PnczX/view?usp=sharing"
+        // }
+        // file={{
+        //   url: "https://cdn.filestackcontent.com/wcrjf9qPTCKXV3hMXDwK",
+        // }}
+        file={"resume.pdf"}
+        onLoadError={console.error}
+      >
+        <Page pageNumber={1} />
+      </Document>
     </div>
   );
 };

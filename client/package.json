@@ -7,6 +7,7 @@
     "@emotion/styled": "^11.10.6",
     "@mikecousins/react-pdf": "^6.1.1",
     "@mui/material": "^5.11.10",
+    "@react-pdf/renderer": "^3.1.7",
     "@types/jest": "^29.4.0",
     "@types/node": "^18.13.0",
     "@types/react": "^18.0.28",
@@ -19,7 +20,7 @@
     "react-lazyload": "^3.2.0",
     "react-pdf": "^6.2.2",
     "react-router-dom": "^6.8.1",
-    "react-scripts": "^4.0.1",
+    "react-scripts": "^5.0.1",
     "typescript": "^4.9.5"
   },
   "scripts": {

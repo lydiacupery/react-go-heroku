@@ -42,6 +42,9 @@ export const Resume: React.FC<{}> = () => {
         title="Resume"
       /> */}
       <Document
+        options={{
+          workerSrc: "pdf.worker.js",
+        }}
         // file={
         //   "https://drive.google.com/file/d/1oCFPb6SYnweyNR9lk2QcewJvRs9PnczX/view?usp=sharing"
         // }

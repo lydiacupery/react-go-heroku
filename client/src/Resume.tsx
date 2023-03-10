@@ -3,6 +3,9 @@ import { Document, Page } from "react-pdf/dist/esm/entry.webpack5";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
+// @ts-ignore
+import pdf from "./assets/resume.pdf";
+
 export const Resume: React.FC<{}> = () => {
   // const [imgSrc, setSrc] = useState(undefined);
 
@@ -45,7 +48,7 @@ export const Resume: React.FC<{}> = () => {
         // file={{
         //   url: "https://cdn.filestackcontent.com/wcrjf9qPTCKXV3hMXDwK",
         // }}
-        file={"resume.pdf"}
+        file={pdf}
         onLoadError={console.error}
       >
         <Page pageNumber={1} />

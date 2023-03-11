@@ -7,7 +7,8 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 // @ts-ignore
 import pdf from "./assets/resume.pdf";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+// pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = `pdf.worker.js`;
 
 export const Resume: React.FC<{}> = () => {
   // const [imgSrc, setSrc] = useState(undefined);

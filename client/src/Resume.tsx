@@ -1,10 +1,12 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import { Document, Page } from "react-pdf/dist/esm/entry.webpack5";
+import { Document, Page, pdfjs } from "react-pdf/dist/esm/entry.webpack5";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
 // @ts-ignore
 import pdf from "./assets/resume.pdf";
+// pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 export const Resume: React.FC<{}> = () => {
   // const [imgSrc, setSrc] = useState(undefined);

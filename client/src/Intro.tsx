@@ -37,19 +37,20 @@ export const Intro: React.FC<{}> = (props) => {
         />
       </LazyLoad>
       <p style={{ width: "50%", textAlign: "left" }}>
-        After taking a computer science class on a whim, I got hooked on
+        After taking a college computer science class on a whim, I got hooked on
         building systems from scratch and breaking down a problem to its
         component parts.
       </p>
       <p style={{ width: "50%", textAlign: "left" }}>
         I started working at Atomic, a consultancy in Grand Rapids, right after
-        graduation. At Atomic, I combine my interest in building full-stack
-        systems with the more business-focused side building a product that
-        makes sense for the problem.
+        graduation. I'm a full stack developer At Atomic. At Atomic, we use a
+        wide range of technologies to build custom products for our clients.
+        Some technologies I'm most familiar with AWS, PSQL, Node, Typescript,
+        Docker, React, and CSS.
       </p>
       <p style={{ width: "50%", textAlign: "left" }}>
-        I enjoy understanding how all parts of a system fit together - from
-        database constraints to frontend animations.
+        I really enjoy understanding how all parts of a system fit together -
+        from database constraints to frontend animations.
       </p>
     </>
   );

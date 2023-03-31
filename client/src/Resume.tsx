@@ -11,21 +11,6 @@ import pdf from "./assets/resume.pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `pdf.worker.js`;
 
 export const Resume: React.FC<{}> = () => {
-  // const [imgSrc, setSrc] = useState(undefined);
-
-  // const onLoad = useCallback(() => {
-  //   setSrc(resume);
-  // }, []);
-
-  // useEffect(() => {
-  //   const img = new Image();
-  //   img.src = resume as string;
-  //   img.addEventListener("load", onLoad);
-
-  //   return () => {
-  //     img.removeEventListener("load", onLoad);
-  //   };
-  // }, [onLoad]);
   const Resume = (
     <Document
       options={{

@@ -29,7 +29,16 @@ export const Resume: React.FC<{}> = () => {
     </Document>
   );
   return (
-    <div style={{ marginTop: "20px", height: "100%" }}>
+    <div
+      style={{
+        marginTop: "20px",
+        height: "100%",
+        width: "100%",
+        overflow: "scroll",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
       {/* <img
         src={imgSrc}
         alt="Lydia"

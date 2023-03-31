@@ -33,8 +33,8 @@ export const Resume: React.FC<{}> = () => {
       style={{
         marginTop: "20px",
         height: "100%",
-        width: "100%",
-        overflow: "scroll",
+        maxWidth: "100%",
+        overflow: "auto",
         display: "flex",
         justifyContent: "center",
       }}

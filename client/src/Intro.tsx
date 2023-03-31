@@ -45,8 +45,10 @@ export const Intro: React.FC<{}> = (props) => {
         I started working at Atomic, a consultancy in Grand Rapids, right after
         graduation. I'm a full stack developer At Atomic. At Atomic, we use a
         wide range of technologies to build custom products for our clients.
-        Some technologies I'm most familiar with AWS, PSQL, Node, Typescript,
-        Docker, React, and CSS.
+        Some technologies I'm very familiar with AWS, PSQL, Node, Typescript,
+        Docker, React, and CSS. You can find some of my blog posts about custom
+        software development{" "}
+        <a href="https://spin.atomicobject.com/author/lydia-cupery/">here</a>.
       </p>
       <p style={{ width: "50%", textAlign: "left" }}>
         I really enjoy understanding how all parts of a system fit together -

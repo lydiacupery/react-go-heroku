@@ -33,7 +33,7 @@ export const Talk: React.FC<Props> = (props) => {
         {props.recordingIframes?.map((iframe) => (
           <Grid
             item
-            sm={12}
+            xs={12}
             md={6}
             style={{ paddingBottom: "5px", width: "50%" }}
           >

@@ -45,16 +45,16 @@ export const Resume: React.FC<{}> = () => {
   }, []);
   return (
     <>
-      <Hidden xsUp>
+      <Hidden smUp>
         <div style={style}>
-          <ResumeDocument width={300} />
+          <ResumeDocument width={350} />
         </div>
       </Hidden>
-      <Hidden smUp xsDown>
+      {/* <Hidden smDown mdUp>
         <div style={style}>
-          <ResumeDocument width={400} />
+          <ResumeDocument width={450} />
         </div>
-      </Hidden>
+      </Hidden> */}
       <Hidden smDown>
         <div style={style}>
           <ResumeDocument />

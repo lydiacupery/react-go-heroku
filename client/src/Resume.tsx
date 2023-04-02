@@ -87,14 +87,14 @@ export const Resume: React.FC<{}> = () => {
         <div style={style}>
           <ResumeDocument />
         </div>
-        <a
-          href="/Lydia Cupery - 2023.pdf"
-          target={"_blank"}
-          // download="thing.pdf"
-        >
-          <Button label="View as PDF"></Button>
-        </a>
       </Hidden>
+      <a
+        href="/Lydia Cupery - 2023.pdf"
+        target={"_blank"}
+        // download="thing.pdf"
+      >
+        <Button label="PDF View"></Button>
+      </a>
     </>
   );
 };

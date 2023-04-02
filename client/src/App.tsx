@@ -15,7 +15,8 @@ function App() {
             width: "100%",
             justifyContent: "center",
             backgroundColor: "#446eac59",
-            marginTop: "20px",
+            paddingTop: "5px",
+            paddingBottom: "5px",
           }}
         >
           <NavLink to="/">

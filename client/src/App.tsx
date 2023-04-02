@@ -1,4 +1,4 @@
-import { HashRouter, Link, Route, Routes } from "react-router-dom";
+import { HashRouter, Link, NavLink, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Button } from "./components/Button";
 import { Intro } from "./Intro";
@@ -18,15 +18,15 @@ function App() {
             marginTop: "20px",
           }}
         >
-          <Link to="/">
-            <Button label="Intro" />
-          </Link>
-          <Link to="/talks">
-            <Button label="Talks" />
-          </Link>
-          <Link to="/resume">
-            <Button label="Resume" />
-          </Link>
+          <NavLink to="/">
+            {({ isActive }) => <Button isActive={isActive} label="Intro" />}
+          </NavLink>
+          <NavLink to="/talks">
+            {({ isActive }) => <Button label="Talks" isActive={isActive} />}
+          </NavLink>
+          <NavLink to="/resume">
+            {({ isActive }) => <Button label="Resume" isActive={isActive} />}
+          </NavLink>
         </div>
         <Routes>
           <Route path="/" element={<Intro />} />

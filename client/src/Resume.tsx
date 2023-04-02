@@ -53,10 +53,10 @@ export const Resume: React.FC<{}> = () => {
     };
   }, []);
 
-  const onDownload = () => {
+  const downloadFile = (url: string, filename?: string) => {
     const link = document.createElement("a");
-    link.download = `download.txt`;
-    link.href = "./download.txt";
+    link.href = url;
+    link.download = filename ?? url.split("/").pop() ?? url;
     link.click();
   };
 
@@ -87,8 +87,12 @@ export const Resume: React.FC<{}> = () => {
         <div style={style}>
           <ResumeDocument />
         </div>
-        <a href="/Lydia Cupery - 2023.pdf" target={"_blank"} download>
-          <Button label="Download" width={300}></Button>
+        <a
+          href="/Lydia Cupery - 2023.pdf"
+          target={"_blank"}
+          // download="thing.pdf"
+        >
+          <Button label="View as PDF"></Button>
         </a>
       </Hidden>
     </>

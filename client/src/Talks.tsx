@@ -3,7 +3,7 @@ import { Talk } from "./components/Talk";
 
 export const Talks: React.FC<{}> = (props) => {
   return (
-    <div style={{ width: "70%" }}>
+    <div style={{ width: "70%", paddingBottom: "40px" }}>
       <Talk
         title={"Representing and Accessing Data That Changes Over Time"}
         conferences={["Tech Bash 2022"]}

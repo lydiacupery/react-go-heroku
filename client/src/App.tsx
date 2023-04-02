@@ -1,20 +1,9 @@
-import React, { useCallback, useEffect, useState } from "react";
-import me3 from "./assets/me3.png";
-import compressedMe from "./assets/compressed-me.png";
+import { HashRouter, Link, Route, Routes } from "react-router-dom";
 import "./App.css";
-import PingComponent from "./PingComponent";
-import LazyLoad from "react-lazyload";
 import { Button } from "./components/Button";
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-  Link,
-  HashRouter,
-} from "react-router-dom";
 import { Intro } from "./Intro";
-import { Talks } from "./Talks";
 import { Resume } from "./Resume";
+import { Talks } from "./Talks";
 
 function App() {
   return (

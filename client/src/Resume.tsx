@@ -5,15 +5,24 @@ import React, {
   useCallback,
   useMemo,
 } from "react";
-import { Document, Page } from "react-pdf/dist/esm/entry.webpack5";
-import { pdfjs } from "react-pdf";
+import {
+  Document,
+  Page,
+  pdfjs,
+  // Page,
+  // PDFDownloadLink,
+} from "react-pdf/dist/esm/entry.webpack5";
+// import { pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import { saveAs } from "file-saver";
 
 // @ts-ignore
 import pdf from "./assets/resume.pdf";
 import { Hidden } from "@mui/material";
-import { PDFDownloadLink } from "@react-pdf/renderer";
+import { Link } from "react-router-dom";
+import { Button } from "./components/Button";
+// import { PDFDownloadLink } from "@react-pdf/renderer";
 
 // pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 pdfjs.GlobalWorkerOptions.workerSrc = `pdf.worker.js`;
@@ -43,6 +52,30 @@ export const Resume: React.FC<{}> = () => {
       overflow: "auto",
     };
   }, []);
+
+  const onDownload = () => {
+    const link = document.createElement("a");
+    link.download = `download.txt`;
+    link.href = "./download.txt";
+    link.click();
+  };
+
+  const downloadTxtFile = () => {
+    // text content
+    const texts = ["line 1", "line 2", "line 3"];
+
+    // file object
+    // const file = new Blob(texts, { type: "text/plain" });
+
+    // anchor link
+    const element = document.createElement("a");
+    element.href = URL.createObjectURL(pdf);
+    element.download = "100ideas-" + Date.now() + ".txt";
+
+    // simulate link click
+    document.body.appendChild(element); // Required for this to work in FireFox
+    element.click();
+  };
   return (
     <>
       <Hidden smUp>
@@ -50,20 +83,13 @@ export const Resume: React.FC<{}> = () => {
           <ResumeDocument width={350} />
         </div>
       </Hidden>
-      {/* <Hidden smDown mdUp>
-        <div style={style}>
-          <ResumeDocument width={450} />
-        </div>
-      </Hidden> */}
       <Hidden smDown>
         <div style={style}>
           <ResumeDocument />
-          {/* <PDFDownloadLink document={Resume} fileName="resume.pdf">
-        {({ blob, url, loading, error }) =>
-          loading ? "Loading document..." : "Download now!"
-        }
-      </PDFDownloadLink> */}
         </div>
+        <a href="/Lydia Cupery - 2023.pdf" target={"_blank"} download>
+          <Button label="Download" width={300}></Button>
+        </a>
       </Hidden>
     </>
   );

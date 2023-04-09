@@ -13,7 +13,9 @@ type Props = {
 export const Talk: React.FC<Props> = (props) => {
   return (
     <div>
-      <h3 style={{ textAlign: "left" }}>{props.title}</h3>
+      <h3 style={{ textAlign: "left", whiteSpace: "pre-line" }}>
+        {props.title}
+      </h3>
       {props.talkUrls.map(({ conference, url }) => (
         <div
           style={{

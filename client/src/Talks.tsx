@@ -24,6 +24,26 @@ export const Talks: React.FC<{}> = (props) => {
       }}
     >
       <Talk
+        title={`Preparing for a Successful Product Launch: Your Toolbox \n(Upcoming July 2023)`}
+        conferences={["THAT Conference Wisconsin"]}
+        abstract={`Launching a new product can be an exciting but stressful time. Advocating early for the right tools to recover from any production issues that may arise can eliminate a lot of stress. In this talk, I will discuss the tools you'll want in your “launch toolbox." \n
+I'll cover the following tools, why you should use them, and how to advocate for spending time and money to set them up: \n
+\u2022 An error monitoring tool that notifies you of any errors in your application
+\u2022 A performance monitoring tool that alerts you when an endpoint is taking longer than expected
+\u2022 A searchable and persistent logging tool to aid in debugging and resolving issues
+\u2022 A lower environment that accurately mirrors the production environment, allowing users to test key workflows
+\u2022 Data backup and audit trail to protect against data loss and track changes \n
+Having these tools in your toolbox enables you to proactively address any issues that may arise, making your next launch even smoother! \n
+My examples will be for an application built in Typescript, Express, and Heroku, but the core concepts are applicable to any languages and infrastructure.
+        `}
+        talkUrls={[
+          {
+            url: "https://techbash.com/sessions",
+            conference: "THAT Conference Wisconsin 2023",
+          },
+        ]}
+      />
+      <Talk
         title={"Representing and Accessing Data That Changes Over Time"}
         conferences={["Tech Bash 2022"]}
         abstract={`This talk answers the question “What’s a clean way to represent data that changes over time?” How could one best model a loan with a variable interest rate? The fluctuating price of one's favorite cereal? \n

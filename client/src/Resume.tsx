@@ -46,6 +46,7 @@ export const Resume: React.FC<{}> = () => {
     return {
       marginTop: "20px",
       height: "100%",
+      minHeight: "80vh",
       maxWidth: "100%",
       display: "flex",
       justifyContent: "center",
@@ -53,29 +54,6 @@ export const Resume: React.FC<{}> = () => {
     };
   }, []);
 
-  const downloadFile = (url: string, filename?: string) => {
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = filename ?? url.split("/").pop() ?? url;
-    link.click();
-  };
-
-  const downloadTxtFile = () => {
-    // text content
-    const texts = ["line 1", "line 2", "line 3"];
-
-    // file object
-    // const file = new Blob(texts, { type: "text/plain" });
-
-    // anchor link
-    const element = document.createElement("a");
-    element.href = URL.createObjectURL(pdf);
-    element.download = "100ideas-" + Date.now() + ".txt";
-
-    // simulate link click
-    document.body.appendChild(element); // Required for this to work in FireFox
-    element.click();
-  };
   return (
     <>
       <Hidden smUp>

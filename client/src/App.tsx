@@ -29,11 +29,21 @@ function App() {
             {({ isActive }) => <Button label="Resume" isActive={isActive} />}
           </NavLink>
         </div>
-        <Routes>
-          <Route path="/" element={<Intro />} />
-          <Route path="/talks" element={<Talks />} />
-          <Route path="/resume" element={<Resume />} />
-        </Routes>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+            textAlign: "center",
+            maxWidth: 900,
+          }}
+        >
+          <Routes>
+            <Route path="/" element={<Intro />} />
+            <Route path="/talks" element={<Talks />} />
+            <Route path="/resume" element={<Resume />} />
+          </Routes>
+        </div>
       </div>
     </HashRouter>
   );

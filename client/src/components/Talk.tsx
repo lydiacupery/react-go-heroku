@@ -13,9 +13,15 @@ type Props = {
 export const Talk: React.FC<Props> = (props) => {
   return (
     <div>
-      <h1>{props.title}</h1>
+      <h3 style={{ textAlign: "left" }}>{props.title}</h3>
       {props.talkUrls.map(({ conference, url }) => (
-        <div style={{ paddingBottom: "2px" }}>
+        <div
+          style={{
+            paddingBottom: "2px",
+            display: "flex",
+            justifyContent: "start ",
+          }}
+        >
           <a style={{ color: url ? "#446eac" : "black" }} href={url}>
             {conference}
           </a>

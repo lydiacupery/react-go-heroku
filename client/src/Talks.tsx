@@ -3,7 +3,23 @@ import { Talk } from "./components/Talk";
 
 export const Talks: React.FC<{}> = (props) => {
   return (
-    <div style={{ width: "70%", paddingBottom: "40px" }}>
+    <div
+      style={{
+        paddingBottom: "40px",
+        display: "flex",
+        flexDirection: "column",
+        rowGap: "10px",
+        // backgroundColor: "white",
+        padding: "25px",
+        marginTop: "30px",
+        marginBottom: "30px",
+        borderLeft: "10px solid #446eac59",
+
+        // backgroundColor: "rgba(68, 110, 172, 0.05)",
+        // boxShadow: " 10px 10px 41px 0px rgba(0,0,0,0.75)",
+        // borderRight: "10px solid gray",
+      }}
+    >
       <Talk
         title={"Representing and Accessing Data That Changes Over Time"}
         conferences={["Tech Bash 2022"]}

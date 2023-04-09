@@ -7,6 +7,10 @@ import me3 from "./assets/me3.png";
 export const Intro: React.FC<{}> = (props) => {
   const [imgSrc, setSrc] = useState(compressedMe);
 
+  useEffect(() => {
+    document.title = "Lydia Cupery";
+  }, []);
+
   const onLoad = useCallback(() => {
     setSrc(me3);
   }, []);

@@ -13,7 +13,7 @@ export const Talks: React.FC<{}> = (props) => {
         padding: "25px",
         marginTop: "30px",
         marginBottom: "30px",
-        borderLeft: "10px solid #446eac59",
+        // borderLeft: "10px solid #446eac59",
 
         // backgroundColor: "rgba(68, 110, 172, 0.05)",
         // boxShadow: " 10px 10px 41px 0px rgba(0,0,0,0.75)",

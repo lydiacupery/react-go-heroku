@@ -42,6 +42,9 @@ const ResumeDocument: React.FC<{ width?: number }> = (props) => {
 };
 
 export const Resume: React.FC<{}> = () => {
+  useEffect(() => {
+    document.title = "Lydia Cupery | Resume";
+  }, []);
   const style = useMemo(() => {
     return {
       marginTop: "20px",
@@ -52,6 +55,9 @@ export const Resume: React.FC<{}> = () => {
       justifyContent: "center",
       overflow: "auto",
     };
+  }, []);
+  useEffect(() => {
+    document.title = "Lydia Cupery | Resume";
   }, []);
 
   return (

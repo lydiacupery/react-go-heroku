@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Talk } from "./components/Talk";
 
 export const Talks: React.FC<{}> = (props) => {
+  useEffect(() => {
+    document.title = "Lydia Cupery | Talks";
+  }, []);
   return (
     <div
       style={{

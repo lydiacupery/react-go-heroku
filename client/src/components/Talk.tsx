@@ -6,7 +6,7 @@ type Props = {
   conferences: Array<string>;
   abstract: string;
   slidesUrl?: string;
-  recordingIframes?: Array<JSX.Element>;
+  iframes?: Array<JSX.Element>;
   talkUrls?: Array<{ conference: string; url?: string }>;
 };
 
@@ -38,7 +38,7 @@ export const Talk: React.FC<Props> = (props) => {
         {props.abstract}
       </p>
       <Grid container columnSpacing={2}>
-        {props.recordingIframes?.map((iframe) => (
+        {props.iframes?.map((iframe) => (
           <Grid
             item
             xs={12}

@@ -24,7 +24,40 @@ export const Talks: React.FC<{}> = (props) => {
       }}
     >
       <Talk
-        title={`Preparing for a Successful Product Launch: Your Toolbox \n(Upcoming July 2023)`}
+        title={`Scaling Web Applications with Background Jobs: Takeaways from Generating a Huge PDF`}
+        iframes={[]}
+        conferences={["Beer City Code"]}
+        abstract={`Do you need to perform time-consuming or CPU-intensive processes in your web application but are concerned about performance? This is where background jobs come in. By offloading resource-intensive tasks to separate worker processes, you can improve the scalability of your web application.\n
+In this talk, I'll share our experience of using background jobs to scale our web application. First, I'll discuss the challenges we faced that led us to adopt background jobs. Then, I'll share practical tips on how to design background jobs for CPU-intensive or time-consuming processes, such as generating huge PDFs and batch emailing. Finally, I'll summarize the performance and cost benefits that we achieved by offloading such work to background jobs.\n
+I'll use Typescript, Express, and Heroku as examples in this talk, but the concepts and best practices that I'll share are applicable to other languages and infrastructures.
+        `}
+        talkUrls={[
+          {
+            url: "https://www.beercitycode.com/#schedule",
+            conference: "Beer City Code 2023",
+          },
+          {
+            url: "https://2023.allthingsopen.org/",
+            conference: "All Things Open 2023",
+          },
+        ]}
+      />
+      <Talk
+        title={`Preparing for a Successful Product Launch: Your Toolbox`}
+        iframes={[
+          <iframe
+            src="https://show.zohopublic.com/publish/n41gx8f532f1f19264410bff8a436f3522345"
+            width="100%"
+            height="auto"
+            title="Product Launch Kit Talk - Zoho Show"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            style={{
+              aspectRatio: "16 / 9",
+            }}
+          ></iframe>,
+        ]}
         conferences={["THAT Conference Wisconsin"]}
         abstract={`Launching a new product can be an exciting but stressful time. Advocating early for the right tools to recover from any production issues that may arise can eliminate a lot of stress. In this talk, I will discuss the tools you'll want in your “launch toolbox." \n
 I'll cover the following tools, why you should use them, and how to advocate for spending time and money to set them up: \n
@@ -38,7 +71,7 @@ My examples will be for an application built in Typescript, Express, and Heroku,
         `}
         talkUrls={[
           {
-            url: "https://techbash.com/sessions",
+            url: "https://that.us/activities/aZoryQs8PFYi2YKPXNks",
             conference: "THAT Conference Wisconsin 2023",
           },
         ]}
@@ -78,7 +111,7 @@ My examples will be for an application built in Typescript, Express, and Heroku,
             url: "https://cwitc.org/2020/sessions",
           },
         ]}
-        recordingIframes={[
+        iframes={[
           <iframe
             width="100%"
             height="315"

@@ -25,7 +25,19 @@ export const Talks: React.FC<{}> = (props) => {
     >
       <Talk
         title={`Scaling Web Applications with Background Jobs: Takeaways from Generating a Huge PDF`}
-        iframes={[]}
+        iframes={[
+          <iframe
+            src="https://docs.google.com/presentation/d/e/2PACX-1vSpWCMCOZsw1EjaNGfwJ-_v57XujWplWEzPtE8SVvSsG5LJxS8Ldh3IHRS2cZGwIxi25NhoMmSzfijp/embed?start=false&loop=false&delayms=3000"
+            frameBorder="0"
+            width="100%"
+            height="auto"
+            allowFullScreen
+            title="Scaling Web Applications with Background Jobs: Takeaways from Generating a Huge PDF"
+            style={{
+              aspectRatio: "16 / 9",
+            }}
+          ></iframe>,
+        ]}
         conferences={["Beer City Code"]}
         abstract={`Do you need to perform time-consuming or CPU-intensive processes in your web application but are concerned about performance? This is where background jobs come in. By offloading resource-intensive tasks to separate worker processes, you can improve the scalability of your web application.\n
 In this talk, I'll share our experience of using background jobs to scale our web application. First, I'll discuss the challenges we faced that led us to adopt background jobs. Then, I'll share practical tips on how to design background jobs for CPU-intensive or time-consuming processes, such as generating huge PDFs and batch emailing. Finally, I'll summarize the performance and cost benefits that we achieved by offloading such work to background jobs.\n

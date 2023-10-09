@@ -68,6 +68,11 @@ export const Intro: React.FC<{}> = (props) => {
         software development{" "}
         <a href="https://spin.atomicobject.com/author/lydia-cupery/">here</a>.
       </p>
+      <p>
+        In 2023, I joined HubSpot as a Senior Software Engineer. I'm a frontend
+        developer on the documentation & onboarding team where we build tools
+        for HubSpot developers.
+      </p>
       <p style={{ textAlign: "left" }}>
         What I find most fulfilling about my work is gaining a deep
         understanding of how all the moving parts of a system work together,

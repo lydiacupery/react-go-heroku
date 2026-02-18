@@ -1,0 +1,72 @@
+.talk {
+  text-align: left;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ddd;
+}
+
+.talk:last-child {
+  border-bottom: none;
+}
+
+.talk-title {
+  margin: 0 0 12px 0;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.talk-conferences {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px 0;
+}
+
+.talk-conferences li {
+  margin-bottom: 4px;
+}
+
+.talk-link {
+  color: #446eac;
+  text-decoration: underline;
+}
+
+.talk-link:hover {
+  color: #2d4a7a;
+}
+
+.slides-link {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.talk-abstract {
+  white-space: pre-line;
+  margin: 0 0 16px 0;
+  color: #333;
+}
+
+.talk-media {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.talk-media-item {
+  width: 100%;
+}
+
+.talk-media-item iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 4px;
+}
+
+@media (max-width: 640px) {
+  .talk-title {
+    font-size: 1.125rem;
+  }
+
+  .talk-media {
+    grid-template-columns: 1fr;
+  }
+}

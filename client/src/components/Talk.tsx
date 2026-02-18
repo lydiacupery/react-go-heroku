@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@mui/material";
+import "./Talk.css";
 
 type Props = {
   title: string;
@@ -12,43 +12,36 @@ type Props = {
 
 export const Talk: React.FC<Props> = (props) => {
   return (
-    <div>
-      <h3 style={{ textAlign: "left", whiteSpace: "pre-line" }}>
-        {props.title}
-      </h3>
-      {props.talkUrls.map(({ conference, url }) => (
-        <div
-          style={{
-            paddingBottom: "2px",
-            display: "flex",
-            justifyContent: "start ",
-          }}
-        >
-          <a style={{ color: url ? "#446eac" : "black" }} href={url}>
-            {conference}
-          </a>
-        </div>
-      ))}
+    <article className="talk">
+      <h3 className="talk-title">{props.title}</h3>
+      <ul className="talk-conferences" aria-label="Conferences">
+        {props.talkUrls?.map(({ conference, url }) => (
+          <li key={conference}>
+            {url ? (
+              <a href={url} className="talk-link">
+                {conference}
+              </a>
+            ) : (
+              <span>{conference}</span>
+            )}
+          </li>
+        ))}
+      </ul>
       {props.slidesUrl && (
-        <a style={{ color: "#446eac" }} href={props.slidesUrl}>
+        <a href={props.slidesUrl} className="talk-link slides-link">
           View Slides
         </a>
       )}
-      <p style={{ whiteSpace: "pre-line", textAlign: "left" }}>
-        {props.abstract}
-      </p>
-      <Grid container columnSpacing={2}>
-        {props.iframes?.map((iframe) => (
-          <Grid
-            item
-            xs={12}
-            md={6}
-            style={{ paddingBottom: "5px", width: "50%" }}
-          >
-            {iframe}
-          </Grid>
-        )) || <></>}
-      </Grid>
-    </div>
+      <p className="talk-abstract">{props.abstract}</p>
+      {props.iframes && props.iframes.length > 0 && (
+        <div className="talk-media">
+          {props.iframes.map((iframe, index) => (
+            <div key={index} className="talk-media-item">
+              {iframe}
+            </div>
+          ))}
+        </div>
+      )}
+    </article>
   );
 };

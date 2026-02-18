@@ -1,17 +1,18 @@
 import React from "react";
 import styles from "./Button.module.css";
-import { Button as MuiButton } from "@mui/material";
 
-export const Button: React.FC<{
+type ButtonProps = {
   label: string;
   isActive?: boolean;
-  width?: number;
-  onClick?: (arg: any) => void;
-}> = ({ label, width, isActive }) => {
+};
+
+export const Button: React.FC<ButtonProps> = ({ label, isActive }) => {
   return (
-    <div className={`${styles.btn} ${isActive ? styles.selected : ""}`}>
-      {/* <i className="fab fa-facebook-f"></i> */}
-      <div>{label}</div>
-    </div>
+    <span
+      className={`${styles.btn} ${isActive ? styles.selected : ""}`}
+      aria-current={isActive ? "page" : undefined}
+    >
+      {label}
+    </span>
   );
 };

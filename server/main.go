@@ -46,6 +46,7 @@ func main() {
 	r := gin.Default()
 	// Serving static content from web - we will populate this from within the docker container
 	r.Use(static.Serve("/", static.LocalFile("./web", true)))
+
 	api := r.Group("/api")
 	dbUrl := os.Getenv("DATABASE_URL")
 	log.Printf("DB [%s]", dbUrl)
@@ -55,6 +56,11 @@ func main() {
 	}
 	log.Println("booyah")
 	api.GET("/ping", pingFunc(db))
+
+	// SPA fallback: serve index.html for client-side routes
+	r.NoRoute(func(c *gin.Context) {
+		c.File("./web/index.html")
+	})
 
 	r.Run()
 }

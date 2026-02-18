@@ -1,42 +1,24 @@
 import React, { useEffect } from "react";
 import { Talk } from "./components/Talk";
+import "./Talks.css";
 
-export const Talks: React.FC<{}> = (props) => {
+export const Talks: React.FC = () => {
   useEffect(() => {
     document.title = "Lydia Cupery | Talks";
   }, []);
-  return (
-    <div
-      style={{
-        paddingBottom: "40px",
-        display: "flex",
-        flexDirection: "column",
-        rowGap: "10px",
-        // backgroundColor: "white",
-        padding: "25px",
-        marginTop: "30px",
-        marginBottom: "30px",
-        // borderLeft: "10px solid #446eac59",
 
-        // backgroundColor: "rgba(68, 110, 172, 0.05)",
-        // boxShadow: " 10px 10px 41px 0px rgba(0,0,0,0.75)",
-        // borderRight: "10px solid gray",
-      }}
-    >
+  return (
+    <section className="talks" aria-labelledby="talks-heading">
+      <h2 id="talks-heading" className="visually-hidden">Conference Talks</h2>
       <Talk
-        title={`Scaling Web Applications with Background Jobs: Takeaways from Generating a Huge PDF`}
+        title="Scaling Web Applications with Background Jobs: Takeaways from Generating a Huge PDF"
         iframes={[
           <iframe
             src="https://docs.google.com/presentation/d/e/2PACX-1vSpWCMCOZsw1EjaNGfwJ-_v57XujWplWEzPtE8SVvSsG5LJxS8Ldh3IHRS2cZGwIxi25NhoMmSzfijp/embed?start=false&loop=false&delayms=3000"
-            frameBorder="0"
-            width="100%"
-            height="auto"
             allowFullScreen
-            title="Scaling Web Applications with Background Jobs: Takeaways from Generating a Huge PDF"
-            style={{
-              aspectRatio: "16 / 9",
-            }}
-          ></iframe>,
+            title="Scaling Web Applications with Background Jobs slides"
+            loading="lazy"
+          />,
         ]}
         conferences={["Beer City Code"]}
         abstract={`Do you need to perform time-consuming or CPU-intensive processes in your web application but are concerned about performance? This is where background jobs come in. By offloading resource-intensive tasks to separate worker processes, you can improve the scalability of your web application.\n
@@ -55,20 +37,15 @@ I'll use Typescript, Express, and Heroku as examples in this talk, but the conce
         ]}
       />
       <Talk
-        title={`Preparing for a Successful Product Launch: Your Toolbox`}
+        title="Preparing for a Successful Product Launch: Your Toolbox"
         iframes={[
           <iframe
             src="https://show.zohopublic.com/publish/n41gx8f532f1f19264410bff8a436f3522345"
-            width="100%"
-            height="auto"
-            title="Product Launch Kit Talk - Zoho Show"
-            frameBorder="0"
+            title="Product Launch Toolbox slides"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-            style={{
-              aspectRatio: "16 / 9",
-            }}
-          ></iframe>,
+            loading="lazy"
+          />,
         ]}
         conferences={["THAT Conference Wisconsin"]}
         abstract={`Launching a new product can be an exciting but stressful time. Advocating early for the right tools to recover from any production issues that may arise can eliminate a lot of stress. In this talk, I will discuss the tools you'll want in your “launch toolbox." \n
@@ -89,7 +66,7 @@ My examples will be for an application built in Typescript, Express, and Heroku,
         ]}
       />
       <Talk
-        title={"Representing and Accessing Data That Changes Over Time"}
+        title="Representing and Accessing Data That Changes Over Time"
         conferences={["Tech Bash 2022"]}
         abstract={`This talk answers the question “What’s a clean way to represent data that changes over time?” How could one best model a loan with a variable interest rate? The fluctuating price of one's favorite cereal? \n
         We can store the things that change over time (variable attributes) in one table and stable attributes in a different table. This makes it easy to store and lookup data that changes over time without unnecessarily duplicating information. \n
@@ -107,11 +84,11 @@ My examples will be for an application built in Typescript, Express, and Heroku,
       />
 
       <Talk
-        title={"How to Render Twenty Thousand Rows without Crashing Chrome"}
+        title="How to Render Twenty Thousand Rows without Crashing Chrome"
         conferences={["Code PaLOUsa 2020"]}
-        abstract={`If you have say twenty thousand rows to render, you probably don’t want to fetch all that data at once and you especially don’t want to render all those rows on page load.\n
-        This talk is about how to render only the rows you need and how to just-in-time load data for those rows. On the frontend, this means “windowing” or “virtualizing”: only rendering enough rows to fill the viewport, with maybe just a few extra. Rendering only the rows you need means less DOM nodes taking up memory and quicker initial load time. I’ll walk through an example of windowing and demonstrate how to optimize windowing performance.\n
-        Next, we’ll look at how the client can just-in-time load chunks of row data as new rows scroll into view. I'll discuss how to create server endpoints to support the client-side incremental data fetching.\n
+        abstract={`If you have say twenty thousand rows to render, you probably don't want to fetch all that data at once and you especially don't want to render all those rows on page load.\n
+        This talk is about how to render only the rows you need and how to just-in-time load data for those rows. On the frontend, this means "windowing" or "virtualizing": only rendering enough rows to fill the viewport, with maybe just a few extra. Rendering only the rows you need means less DOM nodes taking up memory and quicker initial load time. I'll walk through an example of windowing and demonstrate how to optimize windowing performance.\n
+        Next, we'll look at how the client can just-in-time load chunks of row data as new rows scroll into view. I'll discuss how to create server endpoints to support the client-side incremental data fetching.\n
         The examples will be using a Node.js server with a React frontend. However, the concepts of windowing and just-in-time data loading are applicable to any tech stack.`}
         talkUrls={[
           {
@@ -125,22 +102,19 @@ My examples will be for an application built in Typescript, Express, and Heroku,
         ]}
         iframes={[
           <iframe
-            width="100%"
-            height="315"
             src="https://www.youtube.com/embed/HgLX8tgC7SM"
-            title="YouTube video player"
-            frameBorder="0"
+            title="Rendering Large Tables talk - Code PaLOUsa"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-          ></iframe>,
+            loading="lazy"
+          />,
           <iframe
-            width="100%"
-            height="315"
             src="https://www.youtube.com/embed/mDXuJrtxbeY"
-            title="YouTube video player"
+            title="Rendering Large Tables talk - CWITC"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-          ></iframe>,
+            loading="lazy"
+          />,
         ]}
       />
       <Talk
@@ -154,6 +128,6 @@ My examples will be for an application built in Typescript, Express, and Heroku,
           },
         ]}
       />
-    </div>
+    </section>
   );
 };

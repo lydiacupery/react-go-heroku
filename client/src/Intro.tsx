@@ -57,9 +57,11 @@ export const Intro: React.FC = () => {
             </a>.
           </p>
           <p>
-            In 2023, I joined HubSpot as a Senior Software Engineer. I'm a
-            frontend developer on the documentation & onboarding team where we
-            build tools for HubSpot developers.
+            In 2023, I joined HubSpot as a Senior Software Engineer on the
+            Developer Documentation & Onboarding team, building frontend tools
+            for HubSpot developers. At the end of 2025, I transitioned to backend
+            engineering on the Extensions team within the Automations product
+            group, where I work on expanding automation capabilities.
           </p>
           <p>
             What I find most fulfilling about my work is understanding how all

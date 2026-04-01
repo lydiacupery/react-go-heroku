@@ -41,7 +41,7 @@ export const Resume: React.FC = () => {
         <ResumeDocument width={isMobile ? 340 : undefined} />
       </div>
       <a
-        href="/Lydia Cupery - 2023.pdf"
+        href="/Lydia Cupery Resume - 2026.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="resume-download"

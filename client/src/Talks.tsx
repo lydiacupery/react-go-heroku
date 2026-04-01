@@ -11,6 +11,27 @@ export const Talks: React.FC = () => {
     <section className="talks" aria-labelledby="talks-heading">
       <h2 id="talks-heading" className="visually-hidden">Conference Talks</h2>
       <Talk
+        title="Making your Code More Reliable with Typescript"
+        iframes={[
+          <iframe
+            src="https://docs.google.com/presentation/d/12kajL_TYLiYMcbS0Z3L862w-uYHeDrgdicrYc0lcjCc/embed?start=false&loop=false&delayms=3000"
+            allowFullScreen
+            title="Making your Code More Reliable with Typescript slides"
+            loading="lazy"
+          />,
+        ]}
+        conferences={["Beer City Code 2025"]}
+        abstract={`Adding types can prevent errors, clarify code, and speed up development. This session covers examples where using the right types helped achieve all of that.\n
+We'll start with the fundamentals: union types, string template literals, type narrowing, and discriminated unions.\n
+Next, we'll dive into type operators to create complex types from simpler ones. You'll learn how to manipulate and combine types.\n
+Finally, we'll explore advanced TypeScript concepts like generics and conditional types. You'll learn how to create reusable type definitions for reliable and flexible code.`}
+        talkUrls={[
+          {
+            conference: "Beer City Code 2025",
+          },
+        ]}
+      />
+      <Talk
         title="Scaling Web Applications with Background Jobs: Takeaways from Generating a Huge PDF"
         iframes={[
           <iframe
